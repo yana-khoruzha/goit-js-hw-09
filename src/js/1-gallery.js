@@ -72,17 +72,19 @@ const gallery = document.querySelector('.gallery');
 function imagesTemplate() {
   const markup = images.map(el => {
     return `<li class="gallery-item">
-	<a class="gallery-link" href=${el.original}>
+	<a class="gallery-link" href="${el.original}">
 		<img
 			class="gallery-image"
-			src=${el.preview}
-			alt=${el.description}
+			src="${el.preview}"
+			alt="${el.description}"
 			/>
 	</a>
 </li>`;
   }).join('\n');
   return markup;
 }
+
+console.log(imagesTemplate());
 
 const markup = imagesTemplate();
 gallery.innerHTML = markup;
